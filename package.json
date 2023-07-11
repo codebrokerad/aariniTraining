@@ -1,0 +1,43 @@
+{
+  "name": "AariniTraining",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/mail-client": "^3.2.0",
+    "@sap/cds": "^6",
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "hdb": "^0.19.0",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "pool": {
+          "max": 1400,
+          "min": 100
+        }
+      },
+      "auth": {
+        "kind": "dummy"
+      },
+      "mailService": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "testmail",
+          "forwardAuthToken": true
+        }
+      }
+    }
+  }
+}

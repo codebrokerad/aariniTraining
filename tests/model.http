@@ -1,0 +1,20 @@
+// first get request
+###
+GET http://localhost:4004/aarini/Books
+
+// first post request
+###
+POST  http://localhost:4004/aarini/Books
+Content-Type: application/json
+
+{   
+    "ID" : 30,
+    "title" : "abc",
+    "stock" : 100
+}
+
+### // Check mail send with action
+POST http://localhost:4004/aarini/sendMailWithAction
+Content-Type: application/json
+
+{}
